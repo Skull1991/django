@@ -12,8 +12,9 @@ def create(request):
     return render(request,'item/create.html')
 
 def save(request):
-    print(request.POST)
-    data=ItemForm(request.POST)
-    data.save()
 
+    print(request.POST)
+    print(request.FILES)
+    data=ItemForm(request.POST,request.FILES)
+    data.save()
     return redirect('/item')

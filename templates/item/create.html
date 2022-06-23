@@ -1,7 +1,9 @@
-<form action="/item/save/" method="POST">
+<form action="/item/save/" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     item_name:<input type="text" name="item_name"/>
     item_price:<input type="text" name="item_price"/>
+    item_image:<input type="file" name="item_image"/>
+
 
     
     <input type="submit" value="save"/>

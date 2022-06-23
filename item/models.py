@@ -5,6 +5,7 @@ class item(models.Model):
     id=models.AutoField(auto_created=True,primary_key=True)
     item_name=models.CharField(max_length=255)
     item_price=models.FloatField()
+    item_image=models.FileField(upload_to="static/images/items",default="default.jpg")
 
 
     class Meta:

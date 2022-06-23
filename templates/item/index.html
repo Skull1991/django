@@ -13,9 +13,9 @@
 
     body{
 
-        background-color: brown;
+        background-color: grey;
 
-        color: aliceblue;
+        color: whitesmoke;
 
     }
 
@@ -30,14 +30,17 @@
 <body>
 
     <table>
-
+        <a href="/item/create">create new Item</a>
         <tr>
 
             <th>Item id</th>
 
             <th>Item name</th>
 
+            <th>Item price</th>
+
             <th>Item Image</th>
+            <th>Action</th>
 
         </tr>
 
@@ -53,7 +56,14 @@
 
             <th> {{item.item_name}} </th>
 
+            <th> {{item.item_price}} </th>
+
             <th> <img width="100" src="../../{{item.item_image}}"/> </th>
+
+            <th>
+                <a href="/item/edit/{{item.id}}">Edit</a>
+                <a href="/item/delete/{{item.id}}">Delete</a>
+            </th>
 
         </tr>
 

@@ -1,0 +1,12 @@
+<form action="/item/update/{{data.id}}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    item_name:<input type="text" name="item_name" value="{{data.item_name}}"/>
+    item_price:<input type="text" name="item_price" value="{{data.item_price}}"/>
+    item_image:<input type="file" name="item_image" value="{{data.item_image}}"/>
+
+<img width="100" src="/{{data.item_image}}" alt="">
+    
+    <input type="submit" value="update"/>
+</form>
+
+<a href="/item">back</a>

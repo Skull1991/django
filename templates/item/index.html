@@ -28,7 +28,6 @@
 </style>
 
 <body>
-
     <table>
         <a href="/item/create">create new Item</a>
         <tr>
@@ -44,7 +43,10 @@
 
         </tr>
 
+
    
+        <p> {{user.username}}</p>
+
 
         {% for item in items %}
 
@@ -74,7 +76,7 @@
    
 
     </table>
-
+    <a href="/user/logout" type="button" role="button">Logout</a>
    
    
 
